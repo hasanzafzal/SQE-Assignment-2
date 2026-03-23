@@ -112,3 +112,41 @@ C:\Users\Laptop\Source\Repos\SQE-Assignment-2\ShopManagementSystem\obj\Debug\Sho
 C:\Users\Laptop\Source\Repos\SQE-Assignment-2\ShopManagementSystem\obj\Debug\ShopManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Laptop\Source\Repos\SQE-Assignment-2\ShopManagementSystem\obj\Debug\ShopManagementSystem.exe
 C:\Users\Laptop\Source\Repos\SQE-Assignment-2\ShopManagementSystem\obj\Debug\ShopManagementSystem.pdb
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\bin\Debug\ShopManagementSystem.exe.config
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\bin\Debug\ShopManagementSystem.exe
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\bin\Debug\ShopManagementSystem.pdb
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.csproj.AssemblyReference.cache
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.CustomerDelete.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.CustomerInsert.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.CustomerUpdate.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.CustomerView.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.Details.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.Developers.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.FormMenu.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.MyApplications.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.MyLogin.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.OrderDelete.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.OrderInsert.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.OrderView.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ProductDelete.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ProductInsert.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ProductUpdate.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ProductView.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.Properties.Resources.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ReportCustomer.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ReportOrder.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ReportProduct.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ReportStocks.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.ReportVendors.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.StockDelete.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.StockInsert.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.StockUpdate.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.StockView.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.VendorDelete.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.VendorInsert.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.VendorUpdate.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.VendorView.resources
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.csproj.GenerateResource.cache
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.csproj.CoreCompileInputs.cache
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.exe
+E:\source\repos\SQE Assignment 2\ShopManagementSystem\obj\Debug\ShopManagementSystem.pdb
