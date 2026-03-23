@@ -12,7 +12,7 @@ namespace ShopManagementSystem
     {
         SqlConnection con;
 
-        public static string cs = @"Data Source=Dr-Tamim-Khan;Initial Catalog=BSE6;Integrated Security=True";
+        public static string cs = @"Data Source=DESKTOP-HDIN6H2;Initial Catalog=BSE6;Integrated Security=True;TrustServerCertificate=True";
 
         public  SqlConnection connect()
         {
