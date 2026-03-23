@@ -1,0 +1,53 @@
+name: .NET Tests with Coverage
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Start WinAppDriver
+      run: |
+        Start-Process -FilePath "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe"
+      shell: powershell
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore 
+
+    - name: Run Tests and Collect Coverage
+      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults
+
+    - name: Upload Test Results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: ./TestResults/*.trx
+
+    - name: Generate Coverage Report
+      uses: danielpalme/ReportGenerator-GitHub-Action@v5
+      with:
+        reports: './TestResults/**/coverage.cobertura.xml'
+        targetdir: 'coveragereport'
+        reporttypes: 'HtmlInline;Cobertura'
+
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: coveragereport

@@ -17,7 +17,16 @@ namespace selenium
         [ClassInitialize]
         public static void Setup(TestContext context)
         {
-            string appPath = @"E:\source\repos\SQE Assignment 2\ShopManagementSystem\bin\Debug\ShopManagementSystem.exe";
+            // Resolve path dynamically to run properly in local environments as well as GitHub Actions CI
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string appPath = Path.GetFullPath(Path.Combine(baseDir, @"..\..\..\..\ShopManagementSystem\bin\Debug\net8.0-windows\ShopManagementSystem.exe"));
+
+            if (!File.Exists(appPath))
+            {
+                // Fallback for cases where output folder doesn't have a specific target appended
+                appPath = Path.GetFullPath(Path.Combine(baseDir, @"..\..\..\..\ShopManagementSystem\bin\Debug\ShopManagementSystem.exe"));
+            }
+
             AppiumOptions options = new AppiumOptions();
             options.AddAdditionalCapability("app", appPath);
             session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), options);
