@@ -40,11 +40,9 @@ jobs:
         path: ./TestResults/*.trx
 
     - name: Generate Coverage Report
-      uses: danielpalme/ReportGenerator-GitHub-Action@v5
-      with:
-        reports: './TestResults/**/coverage.cobertura.xml'
-        targetdir: 'coveragereport'
-        reporttypes: 'HtmlInline;Cobertura'
+      run: |
+        dotnet tool install -g dotnet-reportgenerator-globaltool
+        reportgenerator -reports:"./TestResults/**/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:"HtmlInline;Cobertura"
 
     - name: Upload Coverage Report
       uses: actions/upload-artifact@v4
