@@ -6,6 +6,8 @@ using System;
 using System.IO;
 using System.Threading;
 
+[assembly: DoNotParallelize]
+
 namespace selenium
 {
     [TestClass]
@@ -120,25 +122,39 @@ namespace selenium
 
             Thread.Sleep(2000);
 
-            // Switch to the newly opened FormMenu window! (Because MyLogin was hidden)
-            // Grab the very first available active application window handle remaining
-            session.SwitchTo().Window(session.WindowHandles[0]);
+            // Create a desktop session to find FormMenu
+            AppiumOptions desktopOptions = new AppiumOptions();
+            desktopOptions.AddAdditionalCapability("app", "Root");
+            var desktopSession = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), desktopOptions);
+
+            Console.WriteLine("Listing top level windows...");
+            var windows = desktopSession.FindElementsByXPath("/*/*");
+            foreach (var w in windows) {
+                try {
+                    string name = w.GetAttribute("Name");
+                    if (name.Contains("Form") || name.Contains("Hasan") || name.Contains("Shop")) {
+                        Console.WriteLine("Window Name: " + name);
+                    }
+                } catch {}
+            }
+
+            var formMenuWindow = desktopSession.FindElementByName("FormMenu");
 
             // 2. Open the Customer Insert screen
             // Native WinForms MenuStrip items are most reliably tracked by their visible Text Name!
-            session.FindElementByName("CUSTOMERS").Click();
+            formMenuWindow.FindElementByName("CUSTOMERS").Click();
             Thread.Sleep(500);
-            session.FindElementByName("INSERT").Click();
+            formMenuWindow.FindElementByName("INSERT").Click();
             Thread.Sleep(1500);
 
             // 3. Enter test data with invalid 9-digit phone number
             // (If this crashes here, MDI children might act as separate windows in WinAppDriver)
-            var customerId = session.FindElementByAccessibilityId("customerId");
-            var cName = session.FindElementByAccessibilityId("CustomerName");
-            var phno = session.FindElementByAccessibilityId("phno");
-            var email = session.FindElementByAccessibilityId("CustomerEmail");
-            var addr = session.FindElementByAccessibilityId("CustomerAddress");
-            var submit = session.FindElementByAccessibilityId("submitButton");
+            var customerId = formMenuWindow.FindElementByAccessibilityId("customerId");
+            var cName = formMenuWindow.FindElementByAccessibilityId("CustomerName");
+            var phno = formMenuWindow.FindElementByAccessibilityId("phno");
+            var email = formMenuWindow.FindElementByAccessibilityId("CustomerEmail");
+            var addr = formMenuWindow.FindElementByAccessibilityId("CustomerAddress");
+            var submit = formMenuWindow.FindElementByAccessibilityId("submitButton");
 
             customerId.SendKeys("10");
             cName.SendKeys("John");
@@ -153,9 +169,14 @@ namespace selenium
 
             try
             {
-                session.FindElementByName("OK").Click();
+                desktopSession.FindElementByName("OK").Click();
             }
             catch (Exception) { }
+
+            if (desktopSession != null)
+            {
+                desktopSession.Quit();
+            }
         }
 
         [TestCleanup]
@@ -165,6 +186,12 @@ namespace selenium
             {
                 session.Quit();
                 session = null;
+            }
+
+            // Ensure all instances are killed to prevent pollution between tests
+            foreach (var process in System.Diagnostics.Process.GetProcessesByName("ShopManagementSystem"))
+            {
+                try { process.Kill(); } catch { }
             }
         }
     }

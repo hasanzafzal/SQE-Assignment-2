@@ -29,6 +29,12 @@ jobs:
     - name: Build
       run: dotnet build --no-restore 
 
+    - name: Setup Database
+      run: |
+        sqllocaldb start MSSQLLocalDB
+        sqlcmd -S "(localdb)\MSSQLLocalDB" -i "SQL file.sql"
+      shell: powershell
+
     - name: Run Tests and Collect Coverage
       run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test_results.trx" --results-directory ./TestResults
 
