@@ -17,10 +17,12 @@ namespace selenium
         [TestInitialize]
         public void Setup()
         {
-            string appPath = @"C:\Users\Laptop\source\repos\SQE-Assignment-2\ShopManagementSystem\bin\Debug\ShopManagementSystem.exe";
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string appPath = Path.GetFullPath(Path.Combine(baseDir, @"..\..\..\..\ShopManagementSystem\bin\Debug\ShopManagementSystem.exe"));
+            
             AppiumOptions options = new AppiumOptions();
             options.AddAdditionalCapability("app", appPath);
-
+        
             session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), options);
             Assert.IsNotNull(session);
         }
