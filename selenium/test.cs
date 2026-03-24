@@ -24,6 +24,7 @@ namespace selenium
             options.AddAdditionalCapability("app", appPath);
         
             session = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), options);
+            session.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             Assert.IsNotNull(session);
         }
 
