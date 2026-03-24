@@ -7089,23 +7089,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Laptop\\.nuget\\packages\\": {},
+    "C:\\Users\\hasanzafzal\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Laptop\\Source\\Repos\\SQE-Assignment-2\\selenium\\selenium.csproj",
+      "projectUniqueName": "E:\\source\\repos\\SQE Assignment 2\\selenium\\selenium.csproj",
       "projectName": "selenium",
-      "projectPath": "C:\\Users\\Laptop\\Source\\Repos\\SQE-Assignment-2\\selenium\\selenium.csproj",
-      "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Laptop\\Source\\Repos\\SQE-Assignment-2\\selenium\\obj\\",
+      "projectPath": "E:\\source\\repos\\SQE Assignment 2\\selenium\\selenium.csproj",
+      "packagesPath": "C:\\Users\\hasanzafzal\\.nuget\\packages\\",
+      "outputPath": "E:\\source\\repos\\SQE Assignment 2\\selenium\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hasanzafzal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7120,8 +7120,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Laptop\\Source\\Repos\\SQE-Assignment-2\\ShopManagementSystem\\ShopManagementSystem.csproj": {
-              "projectPath": "C:\\Users\\Laptop\\Source\\Repos\\SQE-Assignment-2\\ShopManagementSystem\\ShopManagementSystem.csproj"
+            "E:\\source\\repos\\SQE Assignment 2\\ShopManagementSystem\\ShopManagementSystem.csproj": {
+              "projectPath": "E:\\source\\repos\\SQE Assignment 2\\ShopManagementSystem\\ShopManagementSystem.csproj"
             }
           }
         }
@@ -7136,7 +7136,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -7181,7 +7181,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
